@@ -25,7 +25,6 @@ function printShape(shape, height, character) {
   if(shape.toLowerCase() == 'square'){
     let lengtharr = [height];
     for (let row = 0; row < height; row++) {
-
       for (let col = 0; col < height; col++) {
 
         lengtharr[row,col] = character;
@@ -39,8 +38,6 @@ function printShape(shape, height, character) {
 
     for (let row = 0; row < height; row++) {
       if (colinc <= height) {
-        
-      
         for (let col = 0; col < colinc; col++) {
 
           lengtharr[row,col] = character;
@@ -53,7 +50,7 @@ function printShape(shape, height, character) {
   else if(shape.toLowerCase() == 'diamond'){
     let lengtharr = [];
     let pattern = 0;// iadjusts the characters indexes in each row
-    let balance = 0;// keep track of how many character are on each side
+    let patterncounter = 0;// keep track of how many character are on each side
     let decrease = false;// halfway mark indicator
     let thatextragap = false;// offsets the pattern so that it fixes every even number with the same patter after the halfway mark is reached
     
@@ -71,9 +68,9 @@ function printShape(shape, height, character) {
 
       }
 
-      if (balance + 2 >= height) {
-        decrease = true;
-      }
+        if (patterncounter + 2 >= height) {
+          decrease = true;
+        }
 
         if (decrease ===true ) {
           pattern--;
@@ -83,7 +80,7 @@ function printShape(shape, height, character) {
           }
         } else{
           pattern++;
-          balance += 2;
+          patterncounter += 2;
         }
 
       console.log(lengtharr); 
@@ -91,4 +88,4 @@ function printShape(shape, height, character) {
   }
 }
 
-printShape('diamond',6,'@');
+printShape('diamond',5,'@');

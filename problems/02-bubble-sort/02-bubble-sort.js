@@ -13,10 +13,10 @@ function bubbleSort(numArray) {
                 }
             }
         
-         }
-         console.log(numArray);
+        }
 }
 
 let sortarray = [5, 1, 4, 2, 8,24,7];
 
 bubbleSort(sortarray);
+console.log(sortarray);

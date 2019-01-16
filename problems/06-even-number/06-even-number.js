@@ -6,7 +6,7 @@ function isEven(someNum) {
     if (someNum < 0) {
         someNum = -someNum;
     }
-      if (Math.round(someNum / 2) != someNum / 2 ) {
+      if (Math.round(someNum / 2) != someNum / 2 ) { //if the number divied by 2 is a decimal then it is odd
           return false;
       }
       else{
