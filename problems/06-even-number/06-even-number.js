@@ -6,15 +6,12 @@ function isEven(someNum) {
     if (someNum < 0) {
         someNum = -someNum;
     }
-  for (let index = 0; index < someNum; index++) {
-      if(someNum % 2 == 0)
-      {
-        return true;
-      }
-      else{
+      if (Math.round(someNum / 2) != someNum / 2 ) {
           return false;
       }
-  }
+      else{
+          return true;
+      }
 }
 
-console.log(isEven(5));
+console.log(isEven(1));
